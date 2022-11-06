@@ -28,7 +28,7 @@ npm install -D webpack webpack-dev-server webpack-cli
 ```
 
 ```
-npm install -D html-webpack-plugin 
+npm install -D html-webpack-plugin
 ```
 
 ```
@@ -36,7 +36,19 @@ npm install -D clean-webpack-plugin
 ```
 
 ```
+npm install -D @babel/core @babel/preset-env
+```
+
+```
+npm install -D babel-loader
+```
+
+```
 touch webpack.config.js
+```
+
+```
+touch .babelrc
 ```
 
 `webpack.config.js`
@@ -48,6 +60,18 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
+  module: {
+    rules: [
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['*', '.js'],
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
@@ -63,6 +87,16 @@ module.exports = {
     }),
   ],
 };
+```
+
+`.babelrc`
+
+```js
+{
+  "presets": [
+    "@babel/preset-env"
+  ]
+}
 ```
 
 Create `src/index.html`
