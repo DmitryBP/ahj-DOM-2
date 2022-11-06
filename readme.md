@@ -184,3 +184,9 @@ webpack.*.js
   }
 ...
 ```
+
+## JEST
+
+```
+npm install --save-dev jest babel-jest
+```
