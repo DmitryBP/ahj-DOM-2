@@ -116,3 +116,49 @@ Create `src/index.html`
   </body>
 </html>
 ```
+
+## 3. ESlint - Setup Tutorial
+
+[Инструкция.](https://www.robinwieruch.de/webpack-eslint/)
+
+```
+npm install --save-dev eslint-webpack-plugin
+```
+
+```
+npm install --save-dev @babel/eslint-parser
+```
+
+```
+npx install-peerdeps --dev eslint-config-airbnb
+```
+
+```
+touch .eslintrc
+```
+```
+touch .eslintignore
+```
+
+`webpack.config.js `
+
+```js
+
+...
+const ESLintPlugin = require('eslint-webpack-plugin'); // +
+
+module.exports = {
+  ...
+  plugins: [new ESLintPlugin()], // +
+  ...
+};
+```
+
+`.eslintrc`
+
+```js
+{
+  "parser": "@babel/eslint-parser",
+  "extends": ["airbnb"]
+}
+```
