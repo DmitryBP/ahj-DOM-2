@@ -136,6 +136,7 @@ npx install-peerdeps --dev eslint-config-airbnb
 ```
 touch .eslintrc
 ```
+
 ```
 touch .eslintignore
 ```
@@ -161,4 +162,25 @@ module.exports = {
   "parser": "@babel/eslint-parser",
   "extends": ["airbnb"]
 }
+```
+
+`.eslintignore`
+
+```js
+dist
+coverage
+doc
+webpack.*.js
+```
+
+### ESlint Autofixible
+
+`Command + Shift + P` -> `Open user setting (JSON)`
+
+```js
+...
+"editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  }
+...
 ```
