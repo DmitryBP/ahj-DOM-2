@@ -1,8 +1,11 @@
-import sum from './sum';
+/* global document */
 
-console.log('Hello Project.');
-const a = 4;
-const b = 5;
-console.log(a + b);
+// import sum from './sum';
+import './style.css';
 
-console.log(sum(3, 3));
+// console.log(sum(3, 3));
+
+const cssTest = document.createElement('h1');
+cssTest.className = 'CssTest';
+cssTest.innerText = 'CssTest';
+document.body.append(cssTest);

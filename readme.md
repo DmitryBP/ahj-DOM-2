@@ -42,6 +42,9 @@ npm install -D @babel/core @babel/preset-env
 ```
 npm install -D babel-loader
 ```
+```
+npm install -D css-loader style-loader
+```
 
 ```
 touch webpack.config.js
@@ -66,6 +69,10 @@ module.exports = {
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
+      },
+       {
+        test: /\.(css)$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
