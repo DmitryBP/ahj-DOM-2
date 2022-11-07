@@ -42,6 +42,7 @@ npm install -D @babel/core @babel/preset-env
 ```
 npm install -D babel-loader
 ```
+
 ```
 npm install -D css-loader style-loader
 ```
@@ -70,7 +71,7 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
-       {
+      {
         test: /\.(css)$/,
         use: ['style-loader', 'css-loader'],
       },
@@ -196,4 +197,20 @@ webpack.*.js
 
 ```
 npm install --save-dev jest babel-jest
+```
+
+## WEBPACK MERGE CONFIGURATION
+
+[Инструкция.](https://www.robinwieruch.de/webpack-advanced-setup-tutorial/#how-to-manage-your-webpack-build-folder)
+
+```
+npm install -D webpack-merge
+```
+
+```
+mkdir build-utils
+touch webpack.common.js
+touch webpack.config.js
+touch webpack.dev.js
+touch webpack.prod.js
 ```
