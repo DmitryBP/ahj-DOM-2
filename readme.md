@@ -46,6 +46,10 @@ npm install -D babel-loader
 ```
 npm install -D css-loader style-loader
 ```
+
+```
+npm install url-loader --save-dev
+```
 ```
 npm install --save-dev mini-css-extract-plugin
 ```
@@ -217,3 +221,11 @@ touch webpack.config.js
 touch webpack.dev.js
 touch webpack.prod.js
 ```
+
+## mini-css-extract-plugin
+
+[Инструкция.](https://www.robinwieruch.de/webpack-css/)
+
+## How to use Images with Webpack 5 - Setup Tutorial
+
+[Инструкция.](https://www.robinwieruch.de/webpack-images/)
