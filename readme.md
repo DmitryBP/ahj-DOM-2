@@ -32,6 +32,10 @@ npm install -D html-webpack-plugin
 ```
 
 ```
+npm install -D html-loader
+```
+
+```
 npm install -D clean-webpack-plugin
 ```
 
@@ -47,9 +51,6 @@ npm install -D babel-loader
 npm install -D css-loader style-loader
 ```
 
-```
-npm install url-loader --save-dev
-```
 ```
 npm install --save-dev mini-css-extract-plugin
 ```
@@ -81,6 +82,10 @@ module.exports = {
       {
         test: /\.(css)$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
@@ -226,6 +231,27 @@ touch webpack.prod.js
 
 [Инструкция.](https://www.robinwieruch.de/webpack-css/)
 
+`file.js`
+
+```js
+import './style.css';
+```
 ## How to use Images with Webpack 5 - Setup Tutorial
 
-[Инструкция.](https://www.robinwieruch.de/webpack-images/)
+[Инструкция.](https://webpack.js.org/guides/asset-management/#loading-images)
+
+
+`webpack.config.js`
+
+```js
++     {
++        test: /\.(png|svg|jpg|jpeg|gif)$/i,
++        type: 'asset/resource',
++      },
+```
+
+`file.js`
+
+```js
+import html from './file.html';
+```

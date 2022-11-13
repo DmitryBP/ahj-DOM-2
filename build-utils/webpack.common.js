@@ -8,15 +8,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
       {
-        test: /\.(jpg|png)$/,
-        use: {
-          loader: 'url-loader',
-        },
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
@@ -26,6 +28,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '..', './dist'),
     filename: 'bundle.js',
+    clean: true,
   },
   devServer: {
     static: path.resolve(__dirname, '..', './dist'),
