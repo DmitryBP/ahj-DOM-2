@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/olb9r3w5i04lhhdy?svg=true)](https://ci.appveyor.com/project/DmitryBP/webpack5-template)
+
 # Webpack 5 Template
 
 Сборка выполнена на основании [этой статьи ](https://www.robinwieruch.de/webpack-advanced-setup-tutorial/)
